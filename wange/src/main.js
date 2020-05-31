@@ -22,7 +22,13 @@ import {
 	CountDown,
 	Card,
 	Tag,
+	Divider,
+	Sidebar,
+	SidebarItem,
 } from 'vant'
+
+// 引入route
+import router from './routes'
 
 Vue.use(Col)
 Vue.use(Row)
@@ -48,9 +54,16 @@ Vue.use(CountDown)
 Vue.use(Card)
 // 标签标记
 Vue.use(Tag)
+// 分割线
+Vue.use(Divider)
+// 侧边导航栏
+Vue.use(Sidebar)
+Vue.use(SidebarItem)
 
 Vue.config.productionTip = false
 
 new Vue({
+	// 注册路由
+	router,
 	render: (h) => h(App),
 }).$mount('#app')
